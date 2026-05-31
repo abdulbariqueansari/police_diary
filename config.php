@@ -20,7 +20,13 @@ if (!str_starts_with($base_url, '/')) {
 define('BASE_URL', $base_url);
 
 // Create connection
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS);
+$conn = new mysqli(
+    $_ENV['MYSQLHOST'],
+    $_ENV['MYSQLUSER'],
+    $_ENV['MYSQLPASSWORD'],
+    $_ENV['MYSQLDATABASE'],
+    $_ENV['MYSQLPORT']
+);
 
 // Check connection
 if ($conn->connect_error) {
