@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 define('DB_HOST', 'mysql.railway.imternal');
 define('DB_USER', 'root');
 define('DB_PASS', 'UjDkvcRuyxOAmUaLJclOEeErFdqpTvaq');
-define('DB_NAME', 'police_diary');
+define('DB_NAME', 'railway');
 
 define('ROOT_PATH', __DIR__);
 
