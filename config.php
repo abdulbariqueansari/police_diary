@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-define('DB_HOST', 'mysql.railway.imternal');
+define('DB_HOST', 'mysql.railway.internal');
 define('DB_USER', 'root');
 define('DB_PASS', 'UjDkvcRuyxOAmUaLJclOEeErFdqpTvaq');
 define('DB_NAME', 'railway');
