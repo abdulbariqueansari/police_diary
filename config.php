@@ -2,10 +2,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-define('DB_HOST', 'sql212.ezyro.com');
-define('DB_USER', 'ezyro_41931463');
-define('DB_PASS', 'Abdul@1994');
-define('DB_NAME', 'ezyro_41931463_wbpsi_pd');
+define('DB_HOST', 'mysql.railway.imternal');
+define('DB_USER', 'root');
+define('DB_PASS', 'UjDkvcRuyxOAmUaLJclOEeErFdqpTvaq');
+define('DB_NAME', 'police_diary');
 
 define('ROOT_PATH', __DIR__);
 
