@@ -2,11 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-define('DB_HOST', 'mysql.railway.internal');
-define('DB_USER', 'root');
-define('DB_PASS', 'dHmcJGSpUcQOuuVOkEcKqxEmuhKCFNAj');
-define('DB_NAME', 'railway');
-define('DB_PORT', '3306');
+
+
+//define('DB_HOST', 'mysql.railway.internal');
+//define('DB_USER', 'root');
+//define('DB_PASS', 'dHmcJGSpUcQOuuVOkEcKqxEmuhKCFNAj');
+//define('DB_NAME', 'railway');
+//define('DB_PORT', '3306');
 
 define('ROOT_PATH', __DIR__);
 
@@ -21,7 +23,19 @@ if (!str_starts_with($base_url, '/')) {
 define('BASE_URL', $base_url);
 
 // Create connection
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
+
+
+$conn = new mysqli(
+    $_ENV['MYSQLHOST'],
+    $_ENV['MYSQLUSER'],
+    $_ENV['MYSQLPASSWORD'],
+    $_ENV['MYSQLDATABASE']
+);
+
+//if ($mysqli->connect_error) {
+//    die('Connection failed: ' . $mysqli->connect_error);
+//}
+//$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
 // Check connection
 if ($conn->connect_error) {
